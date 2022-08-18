@@ -8,4 +8,5 @@ Insatll steps:
 
 
 Notes for running:
+- Run the NCCC_Scraper.py file in your terminal
 - Enter your username and then your password for Degreeworks as command line arguments for this program to work
