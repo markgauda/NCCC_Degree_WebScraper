@@ -8,4 +8,4 @@ Insatll steps:
 
 
 Notes for running:
--Enter your username and then your password for Degreeworks as command line arguments for this program to work
+- Enter your username and then your password for Degreeworks as command line arguments for this program to work
