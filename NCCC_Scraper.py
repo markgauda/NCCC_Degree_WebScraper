@@ -49,8 +49,14 @@ def main_loop(driver):
     except:
         driver.find_element(By.ID, "WhatIfWorksheetMode").click()
         driver.find_element(By.ID,"catalogYear_label_value").click()
-    java_script = "document.querySelectorAll('li')[3].click()" #Hard coding the location of the current semester
-    driver.execute_script(java_script)
+    current_year_list_location = 2 #Hard coding the location of the current semester
+    try:
+        driver.find_elements(By.TAG_NAME, "li")[current_year_list_location].click()
+        time.sleep(1)
+    except:
+        java_script = "document.querySelectorAll('li')[{index}].click()".format(index = current_year_list_location) #Hard coding the location of the current semester
+        driver.execute_script(java_script)
+        time.sleep(1)
     try:
         driver.find_element(By.ID, "major_label_value").click()
     except:
